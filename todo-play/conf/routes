@@ -1,0 +1,14 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Assets.at(path="/public", file="index.html")
+GET     /*file                      controllers.Assets.at(path="/public", file)
+
+
+GET     /todos                      controllers.Application.todos
+POST    /todos                      controllers.Application.createTodo
+PUT     /todos/:id                  controllers.Application.updateTodo(id: Long)
+DELETE  /todos/:id                  controllers.Application.deleteTodo(id: Long)
+
